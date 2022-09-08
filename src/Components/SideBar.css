@@ -1,0 +1,14 @@
+.sideBar {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.169);
+}
+.sideBar_logo {
+    margin-top: 30px;
+}
+.sideBar_title {
+    margin-top: 50px;
+    font-size: 40px;
+}

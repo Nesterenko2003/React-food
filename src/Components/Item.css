@@ -1,0 +1,36 @@
+.mainPart_item {
+    height: 350px;
+    width: 240px;
+    padding: 0px 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 60px 0px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.16);
+}
+.mainPart_itemImage {
+    margin-top: 20px;
+}
+.mainPart_itemInfo {
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainPart_itemTitle {
+    margin-top: 10px;
+    text-align: center;
+}
+.mainPart_itemButtons {
+    display: flex;
+    height: 65px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.mainPart_itemPrice {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}

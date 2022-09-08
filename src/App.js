@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.css'
+import MainPart from './Components/MainPart';
+import SideBar from './Components/SideBar';
+import {useEffect, useState} from 'react'
+import { ItemContext } from './Context/ItemContext';
 function App() {
+  const [items, setItems] = useState([])
+  useEffect(()=>{
+    fetch(`https://6319828c6b4c78d91b3d024a.mockapi.io/burgers`)
+    .then ((res)=>res.json())
+    .then((data)=>setItems(data))
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='wrapper'>
+      <SideBar/>
+      <ItemContext.Provider value={items}>
+      <MainPart/>
+      </ItemContext.Provider>
     </div>
-  );
+  )
+   
 }
 
 export default App;
