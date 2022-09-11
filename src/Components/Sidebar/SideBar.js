@@ -1,6 +1,6 @@
 import './SideBar.css'
-import SideBarList from './SideBarList';
-function SideBar({data}){
+import SideBarList from '../SideBarList/SideBarList';
+function SideBar(){
     return(
         <div class="sideBar">
         <img height="50" width="50" className="sideBar_logo" src="./img/navBar_icons/cafe_logo.png" alt=" "/>

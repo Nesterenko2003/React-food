@@ -1,10 +1,8 @@
 import './MainPart.css'
-import Header from './Header';
-import ItemList from './ItemList';
+import ItemList from '../ItemList/ItemList';
 function MainPart() {
     return (
         <div class="mainPart">
-            <Header/>
             <ItemList/>
         </div>
     )

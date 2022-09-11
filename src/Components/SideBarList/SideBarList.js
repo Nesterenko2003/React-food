@@ -1,5 +1,5 @@
 import './SideBarList.css'
-import SideBarPoint from './SideBarPoint';
+import SideBarPoint from '../SideBarPoint/SideBarPoint';
 function SideBarList(){
     let listOfPoints = [
         {img: "./img/navBar_icons/drinks_icon.png", title: "Drinks"},

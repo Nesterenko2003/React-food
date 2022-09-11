@@ -1,8 +1,11 @@
 import './App.css'
-import MainPart from './Components/MainPart';
-import SideBar from './Components/SideBar';
+import MainPart from './Components/MainPart/MainPart';
+import SideBar from './Components/Sidebar/SideBar';
 import {useEffect, useState} from 'react'
-import { ItemContext } from './Context/ItemContext';
+import { ItemContext } from './Components/ItemList/ItemContext';
+import {Routes, Route} from "react-router-dom";
+import Basket from './Pages/Basket';
+import Header from './Components/Header/Header'
 function App() {
   const [items, setItems] = useState([])
   useEffect(()=>{
@@ -12,10 +15,20 @@ function App() {
   }, [])
   return (
     <div className='wrapper'>
-      <SideBar/>
-      <ItemContext.Provider value={items}>
-      <MainPart/>
-      </ItemContext.Provider>
+          <SideBar/>
+      <div className="contentPart">
+      <Header/>
+      <Routes>
+        <Route path='/basket' element={<Basket/>}/>
+        <Route path='/' element={
+          <ItemContext.Provider value={items}>
+          <MainPart/>
+          </ItemContext.Provider>
+        }/>
+      </Routes>
+      </div>
+      
+      
     </div>
   )
    

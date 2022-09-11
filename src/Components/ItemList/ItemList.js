@@ -1,7 +1,7 @@
 import './ItemList.css'
-import Item from './Item';
+import Item from '../Item/Item';
 import { useContext } from 'react';
-import { ItemContext } from '../Context/ItemContext';
+import { ItemContext } from './ItemContext'
 function ItemList() {
     const apiData = useContext(ItemContext)
     return (
