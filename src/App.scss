@@ -4,5 +4,10 @@
 }
 .contentPart {
     padding: 0px 30px;
+    .mainPart {
+        height: 100vh;
+        overflow: auto;
+    }
 }
+
 
